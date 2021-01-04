@@ -1,0 +1,29 @@
+*.img
+*.qcow2
+*.bz2
+*.zip
+*.bak
+*.bak2
+*.log
+*.log.*
+.DS_Store
+
+# ignore directories
+test/
+roles/
+crash_logs/
+logs/
+debug/
+releases/
+
+# ignore packer_cache
+packer_cache
+output-qemu
+packer-qemu
+
+# created from template
+preseed.cfg
+install.conf
+
+# others
+cloud-config.yml
