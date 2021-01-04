@@ -9,6 +9,7 @@ Changes:
 - Changed mirrors to mirrors.nus.edu.sg
 - Fixed qemu-guest-agent not working.
 - Bumped to python3.
+- Changed vmid and userid.
 
 
 # packer-proxmox-templates
