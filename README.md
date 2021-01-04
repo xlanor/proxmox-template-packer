@@ -4,6 +4,7 @@ The original repository can be found here. Many thanks to [chriswayg](https://gi
 
 
 Changes:
+- Bump packer to 1.6.6
 - Bump alpine to 3.12
 - Removed virtual bridge (i'm doing dhcp from my router as this is a small experiment from my homelab.)
 - Changed mirrors to mirrors.nus.edu.sg
