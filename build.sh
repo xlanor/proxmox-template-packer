@@ -84,7 +84,7 @@ if [ $? -eq 1 ]; then echo "ISO checksum does not match!"; exit 1; fi
 printf "\n=> Downloading Ansible role\n\n"
 # will always overwrite role to get latest version from Github
 ansible-galaxy install --force -p playbook/roles -r playbook/requirements.yml
-[[ -f playbook/roles/ansible-initial-server/tasks/main.yml ]] || { echo "Ansible role not found."; exit 1; }
+[[ -f playbook/roles/ansible-alpine-initial/tasks/main.yml ]] || { echo "Ansible role not found."; exit 1; }
 
 # the vm_default_user name will be used by Packer and Ansible
 export vm_default_user=$vm_default_user
