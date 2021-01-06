@@ -4,6 +4,7 @@ The original repository can be found here. Many thanks to [chriswayg](https://gi
 
 
 Changes:
+- Bump packer to 1.6.6
 - Bump alpine to 3.12
 - Removed virtual bridge (i'm doing dhcp from my router as this is a small experiment from my homelab.)
 - Changed mirrors to mirrors.nus.edu.sg
@@ -31,8 +32,6 @@ Changes:
 The build script which will run the packer template is *configured to run on the Proxmox server*. Thus the following pre-requisites should be installed on the Proxmox server:
 
 - Ensure that [Proxmox 6](https://www.proxmox.com/en/downloads) is installed
-- Set up a DHCP server on `vmbr1` (for example `isc-dhcp-server`) see section [DHCP](https://github.com/chriswayg/ansible-proxmox/blob/master/tasks/main.yml)
-
 ```
 printf  "Proxmox $(pveversion)\n"
 ```

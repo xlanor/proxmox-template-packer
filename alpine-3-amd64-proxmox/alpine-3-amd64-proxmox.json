@@ -87,6 +87,7 @@
               "rc-update add udev-settle <enter>",
               "rc-update add udev-postmount <enter>",
               "echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config <enter>",
+              "echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config <enter>",
               "exit <enter><wait>",
               "umount /mnt/sys <enter><wait>",
               "umount /mnt/proc <enter><wait>",
