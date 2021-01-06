@@ -11,6 +11,6 @@
   vars_files:
     - server-template-vars.yml
   roles:
-    - role: ansible-initial-server
+    - role: ansible-alpine-initial
       vars:
         iserver_user: "{{ vm_default_user }}"
