@@ -91,15 +91,7 @@ mkdir -p http
 
 # j2 is the better solution than 'envsubst' which messes up '$' in the text unless you specify each variable
 
-# Debian & Ubuntu
-## Insert the password hashes for root and default user into preseed.cfg using a Jinja2 template
-if [[ -f preseed.cfg.j2 ]]; then
-    export password_hash1=$(mkpasswd -R 1000000 -m sha-512 $ssh_password)
-    export password_hash2=$(mkpasswd -R 1000000 -m sha-512 $ssh_password)
-    printf "\n=> Customizing auto preseed.cfg\n"
-    j2 preseed.cfg.j2 > http/preseed.cfg
-    [[ -f http/preseed.cfg ]] || { echo "Customized preseed.cfg file not found."; exit 1; }
-fi
+
 
 # OpenBSD
 ## Insert the password hashes for root and default user into install.conf using a Jinja2 template
@@ -128,6 +120,3 @@ case $target in
         ;;
 esac
 
-## remove file which has the hashed passwords
-[[ -f http/preseed.cfg ]] && printf "=> " && rm -v http/preseed.cfg
-[[ -f http/install.conf ]] && printf "=> " && rm -v http/install.conf
