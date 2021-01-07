@@ -74,12 +74,9 @@ fi
 [[ -z "$ssh_password" ]] && echo "The SSH Password is required." && exit 1
 
 ## download ISO and Ansible role
-printf "\n=> Downloading and checking ISO\n\n"
+printf "\n=> Downloading ISO\n\n"
 iso_filename=$(basename $iso_url)
 wget -P $iso_directory -N $iso_url                  # only re-download when newer on the server
-wget --no-verbose $iso_sha256_url -O $iso_directory/SHA256SUMS  # always download and overwrite
-(cd $iso_directory && cat $iso_directory/SHA256SUMS | grep $iso_filename | sha256sum --check)
-if [ $? -eq 1 ]; then echo "ISO checksum does not match!"; exit 1; fi
 
 printf "\n=> Downloading Ansible role\n\n"
 # will always overwrite role to get latest version from Github
