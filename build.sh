@@ -114,7 +114,6 @@ if [[ -f install.conf.j2 ]]; then
     [[ -f http/install.conf ]] || { echo "Customized install.conf file not found."; exit 1; }
 fi
 
-vm_ver=$(git describe --tags)
 
 ## Call Packer build with the provided data
 case $target in
