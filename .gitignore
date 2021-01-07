@@ -10,7 +10,6 @@
 
 # ignore directories
 test/
-roles/
 crash_logs/
 logs/
 debug/
